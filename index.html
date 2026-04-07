@@ -1,0 +1,766 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giggles Company - Sensory Mat Lesson Plan</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600&family=Quicksand:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+/* 1. CORE STYLING & COLORS */
+:root {
+  --brand-red: #e63946; 
+  --brand-yellow: #f4c542;
+  --brand-blue: #00a8e8;
+  --brand-green: #70e000;
+  --brand-orange: #ff9f1c;
+  --brand-text: #4a4a4a;
+  --bg-color: #f0f7f9;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  background-color: var(--bg-color);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+  margin: 0;
+  padding: 40px 0;
+  font-family: 'Quicksand', sans-serif;
+  color: var(--brand-text);
+}
+
+/* 19cm x 19cm Square Aspect Ratio (800px) */
+.slide-container {
+  background-color: #ffffff;
+  height: 800px;
+  width: 800px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 15px 35px rgba(0,0,0,0.08);
+  margin-bottom: 20px;
+  border-radius: 10px;
+}
+
+/* 2. HEADER SECTION */
+.header-bar {
+  background-color: var(--brand-red);
+  height: 60px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 30px;
+  color: white;
+}
+
+.brand-logo {
+  font-family: 'Fredoka', sans-serif;
+  font-weight: 600;
+  font-size: 26px;
+  text-shadow: 2px 2px 0px rgba(0,0,0,0.1);
+}
+
+.lesson-tag {
+  font-size: 14px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+/* 3. CONTENT AREA LAYOUT */
+.content {
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  flex-grow: 1;
+}
+
+.info-box {
+  border: 5px solid var(--brand-yellow);
+  border-radius: 35px;
+  padding: 25px 30px;
+  position: relative;
+  background-color: #fffdf5;
+}
+
+.info-box h2 {
+  font-family: 'Fredoka', sans-serif;
+  font-size: 34px;
+  margin: 0 0 10px 0;
+  color: var(--brand-blue);
+}
+
+.meta-info {
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.meta-info b { 
+  color: var(--brand-orange); 
+  font-family: 'Fredoka', sans-serif;
+  font-weight: 600;
+}
+
+.instruction-box {
+  border: 5px solid var(--brand-green);
+  border-radius: 35px;
+  padding: 25px 30px;
+  flex-grow: 1;
+  background-color: #fafff2;
+}
+
+.instruction-box h3 {
+  font-family: 'Fredoka', sans-serif;
+  font-size: 24px;
+  margin: 0 0 15px 0;
+  color: var(--brand-red);
+}
+
+.step-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.step-list li {
+  margin-bottom: 12px;
+  font-size: 17px;
+  line-height: 1.5;
+  display: flex;
+  gap: 12px;
+}
+
+.step-number {
+  font-family: 'Fredoka', sans-serif;
+  font-weight: 600;
+  color: var(--brand-blue);
+  background: var(--brand-yellow);
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  flex-shrink: 0;
+}
+
+.footer-text {
+  text-align: center;
+  padding: 15px;
+  font-size: 14px;
+  color: #aaa;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+/* Cover Styling */
+.cover-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  text-align: center;
+  background: radial-gradient(circle, #ffffff 0%, #f0f7f9 100%);
+}
+
+.cover-content h1 {
+  font-family: 'Fredoka', sans-serif;
+  font-size: 72px;
+  color: var(--brand-red);
+  margin: 10px 0;
+  line-height: 1;
+  text-shadow: 3px 3px 0px var(--brand-yellow);
+}
+
+.hero-img {
+  width: 75%;
+  height: 300px;
+  background-color: #eee;
+  border-radius: 40px;
+  border: 8px solid var(--brand-yellow);
+  object-fit: cover;
+  margin-bottom: 25px;
+  transform: rotate(-1deg);
+}
+
+.cover-subtitle {
+  font-size: 28px; 
+  font-weight: 700; 
+  color: var(--brand-blue);
+  font-family: 'Fredoka', sans-serif;
+}
+
+</style>
+</head>
+<body>
+
+<!-- COVER PAGE -->
+<div class="slide-container">
+    <div class="header-bar">
+        <div class="brand-logo">Giggles Company</div>
+        <div class="lesson-tag">Playbook</div>
+    </div>
+    <div class="cover-content">
+        <h1>Sensory Mat<br>Activities</h1>
+        <img src="https://images.unsplash.com/photo-1596464716127-f2a82984de30?q=80&w=800&auto=format&fit=crop" class="hero-img" alt="Cover">
+        <p class="cover-subtitle">20 Super Fun Games!</p>
+    </div>
+    <div class="footer-text">The Giggles Guide to Sensory Play</div>
+</div>
+
+<!-- ACTIVITY 1 -->
+<div class="slide-container">
+    <div class="header-bar">
+        <div class="brand-logo">Giggles Company</div>
+        <div class="lesson-tag">Let's Play!</div>
+    </div>
+    <div class="content">
+        <div class="info-box">
+            <h2>1. Sensory Obstacle Course</h2>
+            <div class="meta-info">
+                <b>Objective:</b> Develop gross motor skills and spatial awareness.<br>
+                <b>Duration:</b> 15–20 Minutes<br>
+                <b>Skills Practiced:</b> Balance, Coordination, Following Instructions
+            </div>
+        </div>
+        <div class="instruction-box">
+            <h3>How to Play:</h3>
+            <ul class="step-list">
+                <li><span class="step-number">1</span> Arrange the 12 mats (Soft, Sandy, Ridged, etc.) in a winding path.</li>
+                <li><span class="step-number">2</span> Tell the child the floor is "off-limits" and they must stay on the mats.</li>
+                <li><span class="step-number">3</span> Assign movements: "Hop on Bumpy," "Tip-toe on Sandy," "Slither like a snake on Shiny."</li>
+                <li><span class="step-number">4</span> Complete the course 3 times, getting faster each round!</li>
+            </ul>
+        </div>
+    </div>
+    <div class="footer-text">Game 1 of 20</div>
+</div>
+
+<!-- ACTIVITY 2 -->
+<div class="slide-container">
+    <div class="header-bar">
+        <div class="brand-logo">Giggles Company</div>
+        <div class="lesson-tag">Let's Play!</div>
+    </div>
+    <div class="content">
+        <div class="info-box">
+            <h2>2. Musical Mats</h2>
+            <div class="meta-info">
+                <b>Objective:</b> Improve auditory processing and reaction times.<br>
+                <b>Duration:</b> 10 Minutes<br>
+                <b>Skills Practiced:</b> Listening Skills, Social Play
+            </div>
+        </div>
+        <div class="instruction-box">
+            <h3>How to Play:</h3>
+            <ul class="step-list">
+                <li><span class="step-number">1</span> Place all 12 mats in a large circle on the floor.</li>
+                <li><span class="step-number">2</span> Play upbeat music while the children dance around the circle.</li>
+                <li><span class="step-number">3</span> Stop the music suddenly; everyone must find a mat!</li>
+                <li><span class="step-number">4</span> Call out a label (e.g., "Checkered!"). The child on that mat does a silly dance!</li>
+            </ul>
+        </div>
+    </div>
+    <div class="footer-text">Game 2 of 20</div>
+</div>
+
+<!-- ACTIVITY 3 -->
+<div class="slide-container">
+    <div class="header-bar">
+        <div class="brand-logo">Giggles Company</div>
+        <div class="lesson-tag">Let's Play!</div>
+    </div>
+    <div class="content">
+        <div class="info-box">
+            <h2>3. The Floor is Lava</h2>
+            <div class="meta-info">
+                <b>Objective:</b> Promote strategic movement and balance.<br>
+                <b>Duration:</b> 10 Minutes<br>
+                <b>Skills Practiced:</b> Problem Solving, Agility
+            </div>
+        </div>
+        <div class="instruction-box">
+            <h3>How to Play:</h3>
+            <ul class="step-list">
+                <li><span class="step-number">1</span> Scatter the mats randomly across the room like "islands."</li>
+                <li><span class="step-number">2</span> The floor is "lava"! You can only stand on the mats.</li>
+                <li><span class="step-number">3</span> Call out a Safe Zone (e.g., "The safe island is Lattice!").</li>
+                <li><span class="step-number">4</span> Navigate the path to reach the Lattice mat without touching the lava.</li>
+            </ul>
+        </div>
+    </div>
+    <div class="footer-text">Game 3 of 20</div>
+</div>
+
+<!-- ACTIVITY 4 -->
+<div class="slide-container">
+    <div class="header-bar">
+        <div class="brand-logo">Giggles Company</div>
+        <div class="lesson-tag">Let's Play!</div>
+    </div>
+    <div class="content">
+        <div class="info-box">
+            <h2>4. Red Light, Green Light</h2>
+            <div class="meta-info">
+                <b>Objective:</b> Practice impulse control.<br>
+                <b>Duration:</b> 10 Minutes<br>
+                <b>Skills Practiced:</b> Self-Regulation, Listening
+            </div>
+        </div>
+        <div class="instruction-box">
+            <h3>How to Play:</h3>
+            <ul class="step-list">
+                <li><span class="step-number">1</span> Kids stand at one end; place mats at the finish line.</li>
+                <li><span class="step-number">2</span> Shout "Green Light!" for them to run toward the mats.</li>
+                <li><span class="step-number">3</span> Shout "Red Light—Fuzzy!" (or any texture).</li>
+                <li><span class="step-number">4</span> They must find and freeze on the Fuzzy mat immediately!</li>
+            </ul>
+        </div>
+    </div>
+    <div class="footer-text">Game 4 of 20</div>
+</div>
+
+<!-- ACTIVITY 5 -->
+<div class="slide-container">
+    <div class="header-bar">
+        <div class="brand-logo">Giggles Company</div>
+        <div class="lesson-tag">Let's Play!</div>
+    </div>
+    <div class="content">
+        <div class="info-box">
+            <h2>5. Sensory Long Jump</h2>
+            <div class="meta-info">
+                <b>Objective:</b> Build leg strength and confidence.<br>
+                <b>Duration:</b> 10 Minutes<br>
+                <b>Skills Practiced:</b> Gross Motor, Bravery
+            </div>
+        </div>
+        <div class="instruction-box">
+            <h3>How to Play:</h3>
+            <ul class="step-list">
+                <li><span class="step-number">1</span> Use tape to mark a "Start" line on the floor.</li>
+                <li><span class="step-number">2</span> Place the Fluffy mat a short distance away as a soft landing pad.</li>
+                <li><span class="step-number">3</span> Have the child jump from the line to the Fluffy mat.</li>
+                <li><span class="step-number">4</span> Move the mat further or swap for the Crinkly mat to hear the "crunch" on landing!</li>
+            </ul>
+        </div>
+    </div>
+    <div class="footer-text">Game 5 of 20</div>
+</div>
+
+<div class="slide-container">
+    <div class="header-bar">
+        <div class="brand-logo">Giggles Company</div>
+        <div class="lesson-tag">Let's Play!</div>
+    </div>
+    <div class="content">
+        <div class="info-box">
+            <h2>6. Vocabulary Toy Hunt</h2>
+            <div class="meta-info">
+                <b>Objective:</b> Expand vocabulary and matching skills.<br>
+                <b>Duration:</b> 30 Minutes<br>
+                <b>Skills Practiced:</b> Vocabulary, Classification
+            </div>
+        </div>
+        <div class="instruction-box">
+            <h3>How to Play:</h3>
+            <ul class="step-list">
+                <li><span class="step-number">1</span> Spread all 12 mats around the classroom.</li>
+                <li><span class="step-number">2</span> Give the child 90 seconds to find 3 household items.</li>
+                <li><span class="step-number">3</span> Match items to mats: A toy dinosaur on Scaly, a hairbrush on Hairy, or sandpaper on Sandy.</li>
+                <li><span class="step-number">4</span> Ask the child to explain why the textures are a "team."</li>
+            </ul>
+        </div>
+    </div>
+    <div class="footer-text">Game 6 of 20</div>
+</div>
+
+<div class="slide-container">
+    <div class="header-bar">
+        <div class="brand-logo">Giggles Company</div>
+        <div class="lesson-tag">Let's Play!</div>
+    </div>
+    <div class="content">
+        <div class="info-box">
+            <h2>7. Label Literacy</h2>
+            <div class="meta-info">
+                <b>Objective:</b> Link tactile sensation with letters.<br>
+                <b>Duration:</b> 15 Minutes<br>
+                <b>Skills Practiced:</b> Pre-reading, Phonics
+            </div>
+        </div>
+        <div class="instruction-box">
+            <h3>How to Play:</h3>
+            <ul class="step-list">
+                <li><span class="step-number">1</span> Choose a mat like Ridged and have the child feel the lines.</li>
+                <li><span class="step-number">2</span> Say "R-R-Ridged" clearly.</li>
+                <li><span class="step-number">3</span> Trace the letters of the "Ridged" label with a pointer finger.</li>
+                <li><span class="step-number">4</span> Repeat for Hairy (H) and Sandy (S) to learn starting sounds.</li>
+            </ul>
+        </div>
+    </div>
+    <div class="footer-text">Game 7 of 20</div>
+</div>
+
+<div class="slide-container">
+    <div class="header-bar">
+        <div class="brand-logo">Giggles Company</div>
+        <div class="lesson-tag">Let's Play!</div>
+    </div>
+    <div class="content">
+        <div class="info-box">
+            <h2>8. Opposite Day</h2>
+            <div class="meta-info">
+                <b>Objective:</b> Teach comparative adjectives.<br>
+                <b>Duration:</b> 10 Minutes<br>
+                <b>Skills Practiced:</b> Logic, Sorting
+            </div>
+        </div>
+        <div class="instruction-box">
+            <h3>How to Play:</h3>
+            <ul class="step-list">
+                <li><span class="step-number">1</span> Compare two mats: Soft and Bumpy.</li>
+                <li><span class="step-number">2</span> Ask: "Which one feels smooth like water (Shiny) and which feels like hills (Bumpy)?"</li>
+                <li><span class="step-number">3</span> Find the "Opposite" of Hairy (maybe Shiny or Soft).</li>
+                <li><span class="step-number">4</span> Discuss why those two feel so different.</li>
+            </ul>
+        </div>
+    </div>
+    <div class="footer-text">Game 8 of 20</div>
+</div>
+
+<div class="slide-container">
+    <div class="header-bar">
+        <div class="brand-logo">Giggles Company</div>
+        <div class="lesson-tag">Let's Play!</div>
+    </div>
+    <div class="content">
+        <div class="info-box">
+            <h2>9. Rhyme Time Challenge</h2>
+            <div class="meta-info">
+                <b>Objective:</b> Enhance phonological awareness.<br>
+                <b>Duration:</b> 10 Minutes<br>
+                <b>Skills Practiced:</b> Rhyming, Auditory Processing
+            </div>
+        </div>
+        <div class="instruction-box">
+            <h3>How to Play:</h3>
+            <ul class="step-list">
+                <li><span class="step-number">1</span> Have the child stand on the Hairy mat.</li>
+                <li><span class="step-number">2</span> Ask: "What rhymes with Hairy? (Berry, Scary, Fairy)."</li>
+                <li><span class="step-number">3</span> If they get it, they jump to Sandy! (Rhyme with: Bandy, Candy).</li>
+                <li><span class="step-number">4</span> See how many rhymes you can find for all 12 labels.</li>
+            </ul>
+        </div>
+    </div>
+    <div class="footer-text">Game 9 of 20</div>
+</div>
+
+<div class="slide-container">
+    <div class="header-bar">
+        <div class="brand-logo">Giggles Company</div>
+        <div class="lesson-tag">Let's Play!</div>
+    </div>
+    <div class="content">
+        <div class="info-box">
+            <h2>10. Alphabet Texture Hunt</h2>
+            <div class="meta-info">
+                <b>Objective:</b> Reinforce letter-sound associations.<br>
+                <b>Duration:</b> 15 Minutes<br>
+                <b>Skills Practiced:</b> Letter Recognition, Phonics
+            </div>
+        </div>
+        <div class="instruction-box">
+            <h3>How to Play:</h3>
+            <ul class="step-list">
+                <li><span class="step-number">1</span> Call out a letter (e.g., "S").</li>
+                <li><span class="step-number">2</span> The child must run and find all mats starting with S (Soft, Shiny, Sandy, Scaly).</li>
+                <li><span class="step-number">3</span> Repeat with "F" for Fluffy and Fuzzy.</li>
+                <li><span class="step-number">4</span> Touch each mat and repeat the starting sound: "S-S-Scaly!"</li>
+            </ul>
+        </div>
+    </div>
+    <div class="footer-text">Game 10 of 20</div>
+</div>
+
+<div class="slide-container">
+    <div class="header-bar">
+        <div class="brand-logo">Giggles Company</div>
+        <div class="lesson-tag">Let's Play!</div>
+    </div>
+    <div class="content">
+        <div class="info-box">
+            <h2>11. Blindfold Guessing</h2>
+            <div class="meta-info">
+                <b>Objective:</b> Strengthen tactile discrimination.<br>
+                <b>Duration:</b> 15 Minutes<br>
+                <b>Skills Practiced:</b> Sensory Processing, Focus
+            </div>
+        </div>
+        <div class="instruction-box">
+            <h3>How to Play:</h3>
+            <ul class="step-list">
+                <li><span class="step-number">1</span> Use a blindfold or have the child close their eyes.</li>
+                <li><span class="step-number">2</span> Place one mat under their feet or in their hands.</li>
+                <li><span class="step-number">3</span> Ask them to describe it: "Is it Crinkly or Ridged?"</li>
+                <li><span class="step-number">4</span> Let them guess the name before opening their eyes!</li>
+            </ul>
+        </div>
+    </div>
+    <div class="footer-text">Game 11 of 20</div>
+</div>
+
+<div class="slide-container">
+    <div class="header-bar">
+        <div class="brand-logo">Giggles Company</div>
+        <div class="lesson-tag">Let's Play!</div>
+    </div>
+    <div class="content">
+        <div class="info-box">
+            <h2>12. Sensory Memory</h2>
+            <div class="meta-info">
+                <b>Objective:</b> Build visual and tactile memory recall.<br>
+                <b>Duration:</b> 15 Minutes<br>
+                <b>Skills Practiced:</b> Visual Memory, Concentration
+            </div>
+        </div>
+        <div class="instruction-box">
+            <h3>How to Play:</h3>
+            <ul class="step-list">
+                <li><span class="step-number">1</span> Lay 4 mats face down (e.g., Lattice, Crinkly, Checkered, Hairy).</li>
+                <li><span class="step-number">2</span> Ask: "Where was the Checkered mat?"</li>
+                <li><span class="step-number">3</span> The child flips one. If it's the Checkered one, they win a point!</li>
+                <li><span class="step-number">4</span> Mix them up and try with 6 mats to make it harder.</li>
+            </ul>
+        </div>
+    </div>
+    <div class="footer-text">Game 12 of 20</div>
+</div>
+
+<div class="slide-container">
+    <div class="header-bar">
+        <div class="brand-logo">Giggles Company</div>
+        <div class="lesson-tag">Let's Play!</div>
+    </div>
+    <div class="content">
+        <div class="info-box">
+            <h2>13. What’s Missing?</h2>
+            <div class="meta-info">
+                <b>Objective:</b> Improve visual scanning and attention.<br>
+                <b>Duration:</b> 5–10 Minutes<br>
+                <b>Skills Practiced:</b> Focus, Memory
+            </div>
+        </div>
+        <div class="instruction-box">
+            <h3>How to Play:</h3>
+            <ul class="step-list">
+                <li><span class="step-number">1</span> Lay out Soft, Sandy, Ridged, and Bumpy in a line.</li>
+                <li><span class="step-number">2</span> The child closes their eyes. Remove the Ridged mat.</li>
+                <li><span class="step-number">3</span> Open eyes! "Which texture is gone?"</li>
+                <li><span class="step-number">4</span> They must recall the name "Ridged" to win.</li>
+            </ul>
+        </div>
+    </div>
+    <div class="footer-text">Game 13 of 20</div>
+</div>
+
+<div class="slide-container">
+    <div class="header-bar">
+        <div class="brand-logo">Giggles Company</div>
+        <div class="lesson-tag">Let's Play!</div>
+    </div>
+    <div class="content">
+        <div class="info-box">
+            <h2>14. Pattern Path Maker</h2>
+            <div class="meta-info">
+                <b>Objective:</b> Teach early logic and sequencing.<br>
+                <b>Duration:</b> 20 Minutes<br>
+                <b>Skills Practiced:</b> Math Foundations, Logic
+            </div>
+        </div>
+        <div class="instruction-box">
+            <h3>How to Play:</h3>
+            <ul class="step-list">
+                <li><span class="step-number">1</span> Start a pattern: "Fluffy, Sandy, Fluffy, Sandy..."</li>
+                <li><span class="step-number">2</span> Ask the child: "What comes next in our path?"</li>
+                <li><span class="step-number">3</span> They find a Fluffy mat to complete the sequence.</li>
+                <li><span class="step-number">4</span> Try a harder one: "Checkered, Scaly, Bumpy... Repeat!"</li>
+            </ul>
+        </div>
+    </div>
+    <div class="footer-text">Game 14 of 20</div>
+</div>
+
+<div class="slide-container">
+    <div class="header-bar">
+        <div class="brand-logo">Giggles Company</div>
+        <div class="lesson-tag">Let's Play!</div>
+    </div>
+    <div class="content">
+        <div class="info-box">
+            <h2>15. Texture Sorting Station</h2>
+            <div class="meta-info">
+                <b>Objective:</b> Categorize items based on properties.<br>
+                <b>Duration:</b> 20 Minutes<br>
+                <b>Skills Practiced:</b> Categorization, Thinking
+            </div>
+        </div>
+        <div class="instruction-box">
+            <h3>How to Play:</h3>
+            <ul class="step-list">
+                <li><span class="step-number">1</span> Place the Hairy and Scaly mats side-by-side.</li>
+                <li><span class="step-number">2</span> Give the child toys like a stuffed lion and a toy lizard.</li>
+                <li><span class="step-number">3</span> Sort them: Lion on Hairy, Lizard on Scaly.</li>
+                <li><span class="step-number">4</span> Repeat with Lattice (garden toys) or Sandy (beach toys).</li>
+            </ul>
+        </div>
+    </div>
+    <div class="footer-text">Game 15 of 20</div>
+</div>
+
+<div class="slide-container">
+    <div class="header-bar">
+        <div class="brand-logo">Giggles Company</div>
+        <div class="lesson-tag">Let's Play!</div>
+    </div>
+    <div class="content">
+        <div class="info-box">
+            <h2>16. Follow the Leader</h2>
+            <div class="meta-info">
+                <b>Objective:</b> Encourage social cooperation.<br>
+                <b>Duration:</b> 10–15 Minutes<br>
+                <b>Skills Practiced:</b> Social Imitation, Listening
+            </div>
+        </div>
+        <div class="instruction-box">
+            <h3>How to Play:</h3>
+            <ul class="step-list">
+                <li><span class="step-number">1</span> The Leader walks over the mats and does a move.</li>
+                <li><span class="step-number">2</span> "Tap the Crinkly mat with your toes!"</li>
+                <li><span class="step-number">3</span> "Pat the Fuzzy mat like a puppy!"</li>
+                <li><span class="step-number">4</span> The child imitates and then gets a turn to lead the adult.</li>
+            </ul>
+        </div>
+    </div>
+    <div class="footer-text">Game 16 of 20</div>
+</div>
+
+<div class="slide-container">
+    <div class="header-bar">
+        <div class="brand-logo">Giggles Company</div>
+        <div class="lesson-tag">Let's Play!</div>
+    </div>
+    <div class="content">
+        <div class="info-box">
+            <h2>17. Texture Relay Race</h2>
+            <div class="meta-info">
+                <b>Objective:</b> Combine speed with recall.<br>
+                <b>Duration:</b> 15 Minutes<br>
+                <b>Skills Practiced:</b> Gross Motor, Identification
+            </div>
+        </div>
+        <div class="instruction-box">
+            <h3>How to Play:</h3>
+            <ul class="step-list">
+                <li><span class="step-number">1</span> Pile all 12 mats at one side of the room.</li>
+                <li><span class="step-number">2</span> Shout: "Run and get the Lattice mat!"</li>
+                <li><span class="step-number">3</span> The child finds it, runs back, and places it down.</li>
+                <li><span class="step-number">4</span> Continue until they have built a full 12-mat path.</li>
+            </ul>
+        </div>
+    </div>
+    <div class="footer-text">Game 17 of 20</div>
+</div>
+
+<div class="slide-container">
+    <div class="header-bar">
+        <div class="brand-logo">Giggles Company</div>
+        <div class="lesson-tag">Let's Play!</div>
+    </div>
+    <div class="content">
+        <div class="info-box">
+            <h2>18. Sensory Twister</h2>
+            <div class="meta-info">
+                <b>Objective:</b> Improve balance and body awareness.<br>
+                <b>Duration:</b> 10 Minutes<br>
+                <b>Skills Practiced:</b> Balance, Body Parts
+            </div>
+        </div>
+        <div class="instruction-box">
+            <h3>How to Play:</h3>
+            <ul class="step-list">
+                <li><span class="step-number">1</span> Arrange your 12 mats in a 3x4 grid.</li>
+                <li><span class="step-number">2</span> Call out: "Left hand on Shiny! Right foot on Ridged!"</li>
+                <li><span class="step-number">3</span> "Tummy on Fluffy! Knee on Checkered!"</li>
+                <li><span class="step-number">4</span> Try to stay balanced while touching both textures.</li>
+            </ul>
+        </div>
+    </div>
+    <div class="footer-text">Game 18 of 20</div>
+</div>
+
+<div class="slide-container">
+    <div class="header-bar">
+        <div class="brand-logo">Giggles Company</div>
+        <div class="lesson-tag">Let's Play!</div>
+    </div>
+    <div class="content">
+        <div class="info-box">
+            <h2>19. Standing Sensory Trivia</h2>
+            <div class="meta-info">
+                <b>Objective:</b> Use reasoning to identify properties.<br>
+                <b>Duration:</b> 15 Minutes<br>
+                <b>Skills Practiced:</b> Logic, Reasoning
+            </div>
+        </div>
+        <div class="instruction-box">
+            <h3>How to Play:</h3>
+            <ul class="step-list">
+                <li><span class="step-number">1</span> Scatter the mats. "I’m thinking of a mat..."</li>
+                <li><span class="step-number">2</span> Hint: "It sounds like a cereal box when you step on it."</li>
+                <li><span class="step-number">3</span> The child jumps to the Crinkly mat!</li>
+                <li><span class="step-number">4</span> Hint: "It feels like a cat's tongue." (Sandy).</li>
+            </ul>
+        </div>
+    </div>
+    <div class="footer-text">Game 19 of 20</div>
+</div>
+
+<div class="slide-container">
+    <div class="header-bar">
+        <div class="brand-logo">Giggles Company</div>
+        <div class="lesson-tag">Let's Play!</div>
+    </div>
+    <div class="content">
+        <div class="info-box">
+            <h2>20. The Calm Down Station</h2>
+            <div class="meta-info">
+                <b>Objective:</b> Emotional regulation.<br>
+                <b>Duration:</b> 5–10 Minutes<br>
+                <b>Skills Practiced:</b> Mindfulness, Regulation
+            </div>
+        </div>
+        <div class="instruction-box">
+            <h3>How to Play:</h3>
+            <ul class="step-list">
+                <li><span class="step-number">1</span> Choose the Soft, Fluffy, or Fuzzy mats.</li>
+                <li><span class="step-number">2</span> Sit quietly on your favorite "Cozy Mat."</li>
+                <li><span class="step-number">3</span> Close your eyes and pet the texture while breathing deeply.</li>
+                <li><span class="step-number">4</span> Relax your body and enjoy the gentle feeling.</li>
+            </ul>
+        </div>
+    </div>
+    <div class="footer-text">Game 20 of 20</div>
+</div>
+
+</body>
+</html>
