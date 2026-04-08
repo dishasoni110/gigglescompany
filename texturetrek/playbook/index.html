@@ -26,28 +26,29 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 40px;
+  gap: 20px; /* Reduced gap for mobile flow */
   margin: 0;
-  padding: 40px 0;
+  padding: 20px 0;
   font-family: 'Quicksand', sans-serif;
   color: var(--brand-text);
 }
 
-/* 19cm x 19cm Square Aspect Ratio (800px) */
+/* 2. SLIDE CONTAINER - RESPONSIVE DESIGN */
 .slide-container {
   background-color: #ffffff;
-  height: 800px;
-  width: 800px;
+  width: 95%; /* Responsive width for mobile */
+  max-width: 800px; /* Limits desktop size */
+  min-height: 800px; /* Maintains square feel on desktop */
   display: flex;
   flex-direction: column;
   position: relative;
   overflow: hidden;
-  box-shadow: 0 15px 35px rgba(0,0,0,0.08);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
   margin-bottom: 20px;
-  border-radius: 10px;
+  border-radius: 20px;
 }
 
-/* 2. HEADER SECTION */
+/* 3. HEADER SECTION */
 .header-bar {
   background-color: var(--brand-red);
   height: 60px;
@@ -55,51 +56,52 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 30px;
+  padding: 0 20px;
   color: white;
 }
 
 .brand-logo {
   font-family: 'Fredoka', sans-serif;
   font-weight: 600;
-  font-size: 26px;
-  text-shadow: 2px 2px 0px rgba(0,0,0,0.1);
+  font-size: 22px;
+  text-shadow: 1px 1px 0px rgba(0,0,0,0.1);
 }
 
 .lesson-tag {
-  font-size: 14px;
-  letter-spacing: 1.5px;
+  font-size: 12px;
+  letter-spacing: 1px;
   text-transform: uppercase;
   font-weight: 700;
 }
 
-/* 3. CONTENT AREA LAYOUT */
+/* 4. CONTENT AREA LAYOUT */
 .content {
-  padding: 40px;
+  padding: 25px;
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 15px;
   flex-grow: 1;
 }
 
 .info-box {
-  border: 5px solid var(--brand-yellow);
-  border-radius: 35px;
-  padding: 25px 30px;
+  border: 4px solid var(--brand-yellow);
+  border-radius: 25px;
+  padding: 20px;
   position: relative;
   background-color: #fffdf5;
 }
 
 .info-box h2 {
   font-family: 'Fredoka', sans-serif;
-  font-size: 34px;
+  font-size: 28px;
   margin: 0 0 10px 0;
   color: var(--brand-blue);
+  line-height: 1.2;
 }
 
 .meta-info {
-  font-size: 16px;
-  line-height: 1.6;
+  font-size: 15px;
+  line-height: 1.5;
 }
 
 .meta-info b { 
@@ -109,17 +111,17 @@ body {
 }
 
 .instruction-box {
-  border: 5px solid var(--brand-green);
-  border-radius: 35px;
-  padding: 25px 30px;
+  border: 4px solid var(--brand-green);
+  border-radius: 25px;
+  padding: 20px;
   flex-grow: 1;
   background-color: #fafff2;
 }
 
 .instruction-box h3 {
   font-family: 'Fredoka', sans-serif;
-  font-size: 24px;
-  margin: 0 0 15px 0;
+  font-size: 20px;
+  margin: 0 0 12px 0;
   color: var(--brand-red);
 }
 
@@ -131,10 +133,10 @@ body {
 
 .step-list li {
   margin-bottom: 12px;
-  font-size: 17px;
-  line-height: 1.5;
+  font-size: 16px;
+  line-height: 1.4;
   display: flex;
-  gap: 12px;
+  gap: 10px;
 }
 
 .step-number {
@@ -142,63 +144,83 @@ body {
   font-weight: 600;
   color: var(--brand-blue);
   background: var(--brand-yellow);
-  width: 28px;
-  height: 28px;
+  width: 24px;
+  height: 24px;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 14px;
+  font-size: 12px;
   flex-shrink: 0;
 }
 
 .footer-text {
   text-align: center;
   padding: 15px;
-  font-size: 14px;
+  font-size: 12px;
   color: #aaa;
   font-weight: bold;
   letter-spacing: 1px;
 }
 
-/* Cover Styling */
+/* 5. COVER PAGE STYLING */
 .cover-content {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 100%;
+  min-height: 600px;
+  padding: 40px 20px;
   text-align: center;
   background: radial-gradient(circle, #ffffff 0%, #f0f7f9 100%);
 }
 
 .cover-content h1 {
   font-family: 'Fredoka', sans-serif;
-  font-size: 72px;
+  font-size: 52px;
   color: var(--brand-red);
   margin: 10px 0;
-  line-height: 1;
-  text-shadow: 3px 3px 0px var(--brand-yellow);
+  line-height: 1.1;
+  text-shadow: 2px 2px 0px var(--brand-yellow);
 }
 
 .hero-img {
-  width: 75%;
-  height: 300px;
+  width: 90%;
+  max-width: 500px;
+  height: auto;
+  aspect-ratio: 4/3;
   background-color: #eee;
-  border-radius: 40px;
-  border: 8px solid var(--brand-yellow);
+  border-radius: 30px;
+  border: 6px solid var(--brand-yellow);
   object-fit: cover;
   margin-bottom: 25px;
   transform: rotate(-1deg);
 }
 
 .cover-subtitle {
-  font-size: 28px; 
+  font-size: 24px; 
   font-weight: 700; 
   color: var(--brand-blue);
   font-family: 'Fredoka', sans-serif;
 }
 
+/* 6. MEDIA QUERIES FOR DESKTOP (800px+ Viewports) */
+@media (min-width: 800px) {
+  body {
+    gap: 40px;
+    padding: 40px 0;
+  }
+  .slide-container {
+    height: 800px; /* Fix height for a true square slide look on desktop */
+    width: 800px;
+  }
+  .info-box h2 { font-size: 34px; }
+  .cover-content h1 { font-size: 72px; }
+  .header-bar { padding: 0 30px; }
+  .brand-logo { font-size: 26px; }
+  .instruction-box h3 { font-size: 24px; }
+  .step-list li { font-size: 17px; }
+}
 </style>
 </head>
 <body>
@@ -229,7 +251,7 @@ body {
             <div class="meta-info">
                 <b>Objective:</b> Develop gross motor skills and spatial awareness.<br>
                 <b>Duration:</b> 15–20 Minutes<br>
-                <b>Skills Practiced:</b> Balance, Coordination, Following Instructions
+                <b>Skills Practiced:</b> Balance, Coordination
             </div>
         </div>
         <div class="instruction-box">
@@ -237,7 +259,7 @@ body {
             <ul class="step-list">
                 <li><span class="step-number">1</span> Arrange the 12 mats (Soft, Sandy, Ridged, etc.) in a winding path.</li>
                 <li><span class="step-number">2</span> Tell the child the floor is "off-limits" and they must stay on the mats.</li>
-                <li><span class="step-number">3</span> Assign movements: "Hop on Bumpy," "Tip-toe on Sandy," "Slither like a snake on Shiny."</li>
+                <li><span class="step-number">3</span> Assign movements: "Hop on Bumpy," "Tip-toe on Sandy," "Slither on Shiny."</li>
                 <li><span class="step-number">4</span> Complete the course 3 times, getting faster each round!</li>
             </ul>
         </div>
@@ -350,13 +372,14 @@ body {
                 <li><span class="step-number">1</span> Use tape to mark a "Start" line on the floor.</li>
                 <li><span class="step-number">2</span> Place the Fluffy mat a short distance away as a soft landing pad.</li>
                 <li><span class="step-number">3</span> Have the child jump from the line to the Fluffy mat.</li>
-                <li><span class="step-number">4</span> Move the mat further or swap for the Crinkly mat to hear the "crunch" on landing!</li>
+                <li><span class="step-number">4</span> Move the mat further or swap for the Crinkly mat to hear the "crunch"!</li>
             </ul>
         </div>
     </div>
     <div class="footer-text">Game 5 of 20</div>
 </div>
 
+<!-- ACTIVITY 6 -->
 <div class="slide-container">
     <div class="header-bar">
         <div class="brand-logo">Giggles Company</div>
@@ -376,7 +399,7 @@ body {
             <ul class="step-list">
                 <li><span class="step-number">1</span> Spread all 12 mats around the classroom.</li>
                 <li><span class="step-number">2</span> Give the child 90 seconds to find 3 household items.</li>
-                <li><span class="step-number">3</span> Match items to mats: A toy dinosaur on Scaly, a hairbrush on Hairy, or sandpaper on Sandy.</li>
+                <li><span class="step-number">3</span> Match items: Dinosaur on Scaly, brush on Hairy, or sandpaper on Sandy.</li>
                 <li><span class="step-number">4</span> Ask the child to explain why the textures are a "team."</li>
             </ul>
         </div>
@@ -384,6 +407,7 @@ body {
     <div class="footer-text">Game 6 of 20</div>
 </div>
 
+<!-- ACTIVITY 7 -->
 <div class="slide-container">
     <div class="header-bar">
         <div class="brand-logo">Giggles Company</div>
@@ -411,6 +435,7 @@ body {
     <div class="footer-text">Game 7 of 20</div>
 </div>
 
+<!-- ACTIVITY 8 -->
 <div class="slide-container">
     <div class="header-bar">
         <div class="brand-logo">Giggles Company</div>
@@ -429,7 +454,7 @@ body {
             <h3>How to Play:</h3>
             <ul class="step-list">
                 <li><span class="step-number">1</span> Compare two mats: Soft and Bumpy.</li>
-                <li><span class="step-number">2</span> Ask: "Which one feels smooth like water (Shiny) and which feels like hills (Bumpy)?"</li>
+                <li><span class="step-number">2</span> Ask: "Which feels smooth like water (Shiny) and which feels like hills (Bumpy)?"</li>
                 <li><span class="step-number">3</span> Find the "Opposite" of Hairy (maybe Shiny or Soft).</li>
                 <li><span class="step-number">4</span> Discuss why those two feel so different.</li>
             </ul>
@@ -438,6 +463,7 @@ body {
     <div class="footer-text">Game 8 of 20</div>
 </div>
 
+<!-- ACTIVITY 9 -->
 <div class="slide-container">
     <div class="header-bar">
         <div class="brand-logo">Giggles Company</div>
@@ -465,6 +491,7 @@ body {
     <div class="footer-text">Game 9 of 20</div>
 </div>
 
+<!-- ACTIVITY 10 -->
 <div class="slide-container">
     <div class="header-bar">
         <div class="brand-logo">Giggles Company</div>
@@ -483,15 +510,16 @@ body {
             <h3>How to Play:</h3>
             <ul class="step-list">
                 <li><span class="step-number">1</span> Call out a letter (e.g., "S").</li>
-                <li><span class="step-number">2</span> The child must run and find all mats starting with S (Soft, Shiny, Sandy, Scaly).</li>
+                <li><span class="step-number">2</span> The child finds all mats starting with S (Soft, Shiny, Sandy, Scaly).</li>
                 <li><span class="step-number">3</span> Repeat with "F" for Fluffy and Fuzzy.</li>
-                <li><span class="step-number">4</span> Touch each mat and repeat the starting sound: "S-S-Scaly!"</li>
+                <li><span class="step-number">4</span> Touch each mat and repeat the sound: "S-S-Scaly!"</li>
             </ul>
         </div>
     </div>
     <div class="footer-text">Game 10 of 20</div>
 </div>
 
+<!-- ACTIVITY 11 -->
 <div class="slide-container">
     <div class="header-bar">
         <div class="brand-logo">Giggles Company</div>
@@ -519,6 +547,7 @@ body {
     <div class="footer-text">Game 11 of 20</div>
 </div>
 
+<!-- ACTIVITY 12 -->
 <div class="slide-container">
     <div class="header-bar">
         <div class="brand-logo">Giggles Company</div>
@@ -546,6 +575,7 @@ body {
     <div class="footer-text">Game 12 of 20</div>
 </div>
 
+<!-- ACTIVITY 13 -->
 <div class="slide-container">
     <div class="header-bar">
         <div class="brand-logo">Giggles Company</div>
@@ -573,6 +603,7 @@ body {
     <div class="footer-text">Game 13 of 20</div>
 </div>
 
+<!-- ACTIVITY 14 -->
 <div class="slide-container">
     <div class="header-bar">
         <div class="brand-logo">Giggles Company</div>
@@ -600,6 +631,7 @@ body {
     <div class="footer-text">Game 14 of 20</div>
 </div>
 
+<!-- ACTIVITY 15 -->
 <div class="slide-container">
     <div class="header-bar">
         <div class="brand-logo">Giggles Company</div>
@@ -620,13 +652,14 @@ body {
                 <li><span class="step-number">1</span> Place the Hairy and Scaly mats side-by-side.</li>
                 <li><span class="step-number">2</span> Give the child toys like a stuffed lion and a toy lizard.</li>
                 <li><span class="step-number">3</span> Sort them: Lion on Hairy, Lizard on Scaly.</li>
-                <li><span class="step-number">4</span> Repeat with Lattice (garden toys) or Sandy (beach toys).</li>
+                <li><span class="step-number">4</span> Repeat with Lattice or Sandy.</li>
             </ul>
         </div>
     </div>
     <div class="footer-text">Game 15 of 20</div>
 </div>
 
+<!-- ACTIVITY 16 -->
 <div class="slide-container">
     <div class="header-bar">
         <div class="brand-logo">Giggles Company</div>
@@ -647,13 +680,14 @@ body {
                 <li><span class="step-number">1</span> The Leader walks over the mats and does a move.</li>
                 <li><span class="step-number">2</span> "Tap the Crinkly mat with your toes!"</li>
                 <li><span class="step-number">3</span> "Pat the Fuzzy mat like a puppy!"</li>
-                <li><span class="step-number">4</span> The child imitates and then gets a turn to lead the adult.</li>
+                <li><span class="step-number">4</span> The child imitates and then gets a turn to lead.</li>
             </ul>
         </div>
     </div>
     <div class="footer-text">Game 16 of 20</div>
 </div>
 
+<!-- ACTIVITY 17 -->
 <div class="slide-container">
     <div class="header-bar">
         <div class="brand-logo">Giggles Company</div>
@@ -681,6 +715,7 @@ body {
     <div class="footer-text">Game 17 of 20</div>
 </div>
 
+<!-- ACTIVITY 18 -->
 <div class="slide-container">
     <div class="header-bar">
         <div class="brand-logo">Giggles Company</div>
@@ -699,7 +734,7 @@ body {
             <h3>How to Play:</h3>
             <ul class="step-list">
                 <li><span class="step-number">1</span> Arrange your 12 mats in a 3x4 grid.</li>
-                <li><span class="step-number">2</span> Call out: "Left hand on Shiny! Right foot on Ridged!"</li>
+                <li><span class="step-number">2</span> Call: "Left hand on Shiny! Right foot on Ridged!"</li>
                 <li><span class="step-number">3</span> "Tummy on Fluffy! Knee on Checkered!"</li>
                 <li><span class="step-number">4</span> Try to stay balanced while touching both textures.</li>
             </ul>
@@ -708,6 +743,7 @@ body {
     <div class="footer-text">Game 18 of 20</div>
 </div>
 
+<!-- ACTIVITY 19 -->
 <div class="slide-container">
     <div class="header-bar">
         <div class="brand-logo">Giggles Company</div>
@@ -735,6 +771,7 @@ body {
     <div class="footer-text">Game 19 of 20</div>
 </div>
 
+<!-- ACTIVITY 20 -->
 <div class="slide-container">
     <div class="header-bar">
         <div class="brand-logo">Giggles Company</div>
@@ -754,7 +791,7 @@ body {
             <ul class="step-list">
                 <li><span class="step-number">1</span> Choose the Soft, Fluffy, or Fuzzy mats.</li>
                 <li><span class="step-number">2</span> Sit quietly on your favorite "Cozy Mat."</li>
-                <li><span class="step-number">3</span> Close your eyes and pet the texture while breathing deeply.</li>
+                <li><span class="step-number">3</span> Close your eyes and pet the texture while breathing.</li>
                 <li><span class="step-number">4</span> Relax your body and enjoy the gentle feeling.</li>
             </ul>
         </div>
